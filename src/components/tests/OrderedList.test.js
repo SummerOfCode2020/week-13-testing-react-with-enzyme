@@ -24,11 +24,7 @@ describe("Ordered List Component", () => {
     const animals = [];
     const wrapper = shallow(<OrderedList options={animals} />);
 
-    expect(
-      wrapper.contains(
-        <span className="empty">Nothing to see here. Move along.</span>
-      )
-    ).toBeTruthy();
+    expect(wrapper.text()).toEqual('Nothing to see here. Move along.')
   });
 
   it("renders a single animal option", () => {
