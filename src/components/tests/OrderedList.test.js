@@ -34,4 +34,12 @@ describe('Our test suite', () => {
 
         expect(wrapper.find('.value').get(0).props.children).toEqual('duck');
     });
+    it('renders an empty list', () => {
+        const animals = [];
+        const wrapper = shallow(<OrderedList options={animals} />);
+
+        expect(wrapper.text()).toEqual("Nothing to see here. Move along.")
+    });
+
+    
 });
