@@ -17,8 +17,8 @@ function ReactResources(props) {
       </tr>
       {props.urlLinks.map((Resource) => (
         <tr key={Resource.Name}>
-          <th>{Resource.name}</th>
-          <th>
+          <th key={Resource.Name}>{Resource.name}</th>
+          <th key={Resource.Name}> 
             <a key={Resource.Name} href={Resource.URL}>
               {Resource.URL}
             </a>
