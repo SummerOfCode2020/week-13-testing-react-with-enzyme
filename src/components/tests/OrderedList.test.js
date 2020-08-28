@@ -24,7 +24,7 @@ describe('Our test suite', () => {
     it('renders no animal options', () => {
         const animals = [];
         const wrapper = shallow(<OrderedList options={animals} />);
-        expect(wrapper.find('.options')).isEmpty().to.equal(true);
+        expect(wrapper.shallow('.options'))(<OrderedList value='Nothing to see here. Move along.' />)
     });
 
     it('renders a single animal option', () => {
