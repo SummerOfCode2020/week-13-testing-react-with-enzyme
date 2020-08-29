@@ -2,8 +2,10 @@ import React from 'react';
 import './App.css';
 import Login from './components/Login'
 import OrderedList from './components/OrderedList';
+import ReactResources from './components/ReactResources'
 
 const petNames = ['Luz', 'Murphy', 'Babaloo', 'Shelly', 'Hat', 'Mia', 'Bear', 'Kat', 'Max', 'Mister Miyagi', 'Pikachu'];
+const websites = ['https://devhints.io/enzyme']
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       </header>
       <Login />
       <OrderedList options={petNames} />
+      {/* show a list of links to react resources */}
+      <ReactResources options={websites} />
     </div>
   );
 }
