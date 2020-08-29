@@ -91,7 +91,7 @@ describe('Email Test Suite', () => {
     it('should change the state of the Login component', () => {
 
         const wrapper = shallow(<Login />);
-        wrapper.find('#email').simulate('blur',
+        wrapper.find('[data-test="login-email"]').simulate('blur',
             {
                 target: { name: 'email', value: 'logrocket@mail.com' }
             });
@@ -105,7 +105,7 @@ describe('Password Test Suite', () => {
     it('should change the state of the Login component', () => {
 
         const wrapper = mount(<Login />);
-        wrapper.find('#password').simulate('blur',
+        wrapper.find('[data-test="login-password"]').simulate('blur',
             {
                 target: { name: 'password', value: 'my log is rocket' }
             });

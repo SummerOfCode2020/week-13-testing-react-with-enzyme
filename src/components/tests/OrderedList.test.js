@@ -3,7 +3,7 @@ import { shallow, mount, render } from '../../enzyme';
 
 import OrderedList from '../OrderedList';
 
-describe('Our test suite', () => {
+describe('Ordered List Generic List Component', () => {
 
     it('renders all the mocked animal options', () => {
         const animals = ['duck', 'bear', 'whale'];
@@ -19,13 +19,17 @@ describe('Our test suite', () => {
         const wrapper = shallow(<OrderedList options={animals} />);
 
         expect(wrapper.find('.empty').exists()).toBe(true);
+        expect(wrapper.contains(<span className="empty">Nothing to see here. Move along.</span>)).toBe(true); // Came up after Hollis' clue
+        expect(wrapper.containsMatchingElement(<span>Nothing to see here. Move along.</span>)).toBeTruthy(); // Found this via a Google Search
+        expect(wrapper.text()).toEqual("Nothing to see here. Move along."); // Example with Alvin
+        expect(wrapper.text()).toBe("Nothing to see here. Move along.");
     });
 
     it('renders a single animal option', () => {
         const animals = ['duck'];
         const wrapper = mount(<OrderedList options={animals} />);
 
-        expect(wrapper.contains(<li key='duck' className="value">duck</li >)).toBeTruthy();
+        expect(wrapper.contains(<li key='duck' className="value">duck</li>)).toBeTruthy();
     });
 
     it('renders correct text in animal option', () => {
