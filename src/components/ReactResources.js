@@ -10,7 +10,7 @@ function ReactResources (props) {
 
     return (
         <ol className="links">
-            {links.map(links => <ReactResources key={link} value={link} />)}
+            {links.map(option => <ReactResources key={link} value={link} />)}
         </ol>
     );
 }
