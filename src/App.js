@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Login from './components/Login'
 import OrderedList from './components/OrderedList';
+import ReactResources from './components/ReactResources';
 
 const petNames = [];// ['Luz', 'Moose', 'Jasper', 'Babaloo', 'Shelly', 'Murphy', 'Hat', 'Mia', 'Bear', 'Kat', 'Max', 'Mister Miyagi', 'Pikachu'];
 
@@ -13,6 +14,7 @@ function App() {
       </header>
       <Login />
       <OrderedList options={petNames} />
+      <ReactResources />
     </div>
   );
 }
