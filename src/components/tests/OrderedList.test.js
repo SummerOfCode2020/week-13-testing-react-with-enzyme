@@ -19,7 +19,7 @@ describe('Order List Generic List Component', () => {
         const wrapper = shallow(<OrderedList options={animals} />);
 
         expect(wrapper.find('.empty').exists()).toBe(true);
-        expect(wrapper.text('.empty')).toEqual('Nothing to see here. Move along.');
+        expect(wrapper.text()).toEqual('Nothing to see here. Move along.');
     });
 
     it('renders a single animal option', () => {
