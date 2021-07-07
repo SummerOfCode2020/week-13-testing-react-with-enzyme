@@ -13,12 +13,18 @@ describe('Our test suite', () => {
         expect(wrapper.find('.options')).toBeDefined();
         expect(wrapper.find('.value')).toHaveLength(animals.length);
     });
-
+/*
     it('renders no animal options', () => {
         const animals = [];
         const wrapper = shallow(<OrderedList options={animals} />);
 
         expect(wrapper.find('.empty').exists()).toBe(true);
+    });*/
+
+    it('renders no animal options', () => {
+        const animals = [];
+        const wrapper = shallow(<OrderedList options={animals} />);
+        expect(wrapper.text()).to.equal('Nothing to see here. Move along.')
     });
 
     it('renders a single animal option', () => {
